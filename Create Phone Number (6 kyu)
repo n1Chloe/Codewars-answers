@@ -1,0 +1,8 @@
+URL to the kata: https://www.codewars.com/kata/525f50e3b73515a6db000b83/train/python
+
+My solution:
+def create_phone_number(n):
+    country = "".join(map(str, n[0:3]))
+    first = "".join(map(str, n[3:6]))
+    second = "".join(map(str, n[6:]))
+    return ("({0}) {1}-{2}".format(country,first,second))
