@@ -1,0 +1,13 @@
+URL to the kata: https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/python
+
+Solution:
+def is_pangram(st):
+    st = st.lower()
+    alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    for char in st:
+        if char in alphabet:
+            alphabet.remove(char)
+    if len(alphabet) == 0:
+        return True
+    else:
+        return False
