@@ -1,0 +1,25 @@
+URL to the kata: https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/python
+
+Will probably add more solutions since I am not that happy with the first one
+
+Solution 1:
+def tower_builder(n_floors):
+    result = []
+    floor = '*'
+    final_floor = ''
+    space_counter = n_floors - 1
+    if n_floors == 0:
+        return("")
+    if n_floors == 1:
+        result.append('*')
+        return (result)
+    for times in range(n_floors):
+        final_floor = floor
+        for i in range(space_counter):
+            final_floor = ' ' + final_floor + ' '
+        space_counter -= 1
+        result.append(final_floor)
+        floor.strip()
+        floor = '*' + floor + '*'
+
+    return result
