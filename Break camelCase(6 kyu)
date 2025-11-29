@@ -1,0 +1,14 @@
+URL to the kata: https://www.codewars.com/kata/5208f99aee097e6552000148/train/python
+
+Solution:
+def solution(s):
+    sentence = ""
+    word = ""
+    for char in s:
+        if char.isupper():
+            sentence = sentence + word + " "
+            word = char
+        else:
+            word += char
+    sentence += word
+    return sentence
